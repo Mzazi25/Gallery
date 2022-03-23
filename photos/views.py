@@ -19,3 +19,18 @@ def artphotos(request):
     locations = Location.objects.all()
     
     return render(request, 'all-photos/photos.html',{"categories":categories,"photos":photos,"locations":locations})
+
+def search_results(request):
+
+    if 'image' in request.GET and request.GET["image"]:
+        search_term = request.GET.get("image")
+        searched_category = Category.search_by_category(search_term)
+        for item in searched_category:
+            searched_images = Image.search_by_category(item.id)
+        message = f"{search_term}"
+
+        return render(request, 'all-photos/search.html',{"message":message,"image": searched_images})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'all-photos/search.html',{"message":message})
