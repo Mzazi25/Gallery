@@ -5,7 +5,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
 
-def images(request):
+def artphotos(request):
     try:
         location = request.GET.get('location')
     except AttributeError:
