@@ -1,5 +1,26 @@
 {%extends 'all-photos/base.html'%}
+{% block content %} 
+{{ block.super}}
 
-{% block content %}
-{{block.super}}
+<div class="container">
+
+  <div class="row">
+
+    <!--Display news Article images  -->
+    {% for photo in photos %}
+    <div class="col-xs-6 col-sm-6 col-md-12 col-lg-6">
+      <img src="{{photo.image.url}}" class="img-responsive" style="height: 200px; width: 400px; " alt="Image">
+      <h2>{{photo.name}}</h2>
+    </div>
+
+  </div>
+
+  {% empty %}
+  <div class="row">
+    <h2 class="text-center">There No Photos</h2>
+  </div>
+  {% endfor %}
+
+</div>
+
 {% endblock %}
