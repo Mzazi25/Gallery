@@ -2,14 +2,14 @@
 {% block content %} 
 {{ block.super}}
 
-<div class="container">
 
-  <div class="row">
 
     <!--Display news Article images  -->
+    <div class="container">
+      <div class="row">
     {% for photo in photos %}
-    <div class="col-xs-6 col-sm-6 col-md-12 col-lg-6">
-      <img src="{{photo.image.url}}" class="img-responsive" style="height: 200px; width: 400px; " alt="Image">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" >
+          <img src="{{photo.image.url}}" class="img-responsive" style="height: 200px; width: 400px;" style="display:flex" alt="Image">
       <h2>{{photo.name}}</h2>
       <h6>{{photo.description}}</h6>
     </div>
