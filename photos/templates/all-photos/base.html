@@ -4,8 +4,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-
-  {% if title %}
+    {% if title %}
   <title>Art Gallery - {{title}}</title>
   {% else %}
     <title> Art Gallery </title>
@@ -19,8 +18,9 @@
 </head>
 <body>
     {% include "navbar.html" %}
-
-    {% block content %} <h1 class='text-center'>Images published on {{date|date:"l d-F Y"}}</h1> {%endblock%}
+    <div class="container-fluid">
+    {% block content %} <h1 class='text-center' style="text-align: center; padding: 20rem; background-image: url(../../../static/images/ball.jpeg); background-size: cover; background-position: center; background-attachment: fixed; padding-bottom: 220px; " > {{date|date:"l d-F Y"}}</h1> {%endblock%}
+    </div>
 
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

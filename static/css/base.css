@@ -2,3 +2,22 @@ h1
 {
   color: green;
 }
+.header{
+  text-align: center;
+  padding:20rem;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 220px;
+  
+}
+.text-center{
+  text-align: center;
+  padding:20rem;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 220px;
+
+
+}
