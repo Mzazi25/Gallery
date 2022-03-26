@@ -32,6 +32,6 @@ class Image(models.Model):
         return self.name
     @classmethod
     def search_by_category(cls,search_term):
-        news = cls.objects.filter(category=search_term)
-        return news
+        image = cls.objects.filter(category=search_term)
+        return image
     
