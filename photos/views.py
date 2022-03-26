@@ -22,14 +22,14 @@ def artphotos(request):
 
 def search_results(request):
 
-    if 'image' in request.GET and request.GET["image"]:
-        search_term = request.GET.get("image")
+    if 'category' in request.GET and request.GET["category"]:
+        search_term = request.GET.get("category")
         searched_category = Category.search_by_category(search_term)
         for item in searched_category:
             searched_images = Image.search_by_category(item.id)
         message = f"{search_term}"
 
-        return render(request, 'all-photos/search.html',{"message":message,"image": searched_images})
+        return render(request, 'all-photos/search.html',{"message":message,"category": searched_category})
 
     else:
         message = "You haven't searched for any term"

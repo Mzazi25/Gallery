@@ -1,0 +1,16 @@
+{%extends 'all-photos/base.html'%}
+
+ {% block content %}
+
+ <div class="container">
+    <div class="col-md-3 my-4">
+        <h1>Name: {{photo.name}}</h1>
+        <p> Description: {{photo.description}}</p>
+        <h4>Location: {{photo.location}}</h4>
+        <h4>Category: {{photo.category}}</h4>
+    </div>
+ </div>   
+
+
+   
+ {% endblock %}
