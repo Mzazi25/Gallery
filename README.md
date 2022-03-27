@@ -16,7 +16,7 @@ Noteable features of the app include:
 ![views](static/images/item2.png)
 
 ### Live link
-Visit the application on 
+Visit the application on https://gallart15.herokuapp.com/
 ### Setup & Run Instructions
 - Create and activate a virtual environment
 - Install the dependencies listed in the requirements.txt
