@@ -38,6 +38,7 @@ Technologies used to develop this application:
 - Django 4.0.3
 - Django-Bootstrap
 - HTML
+-CSS
 ### Support and contact details
 Should you be unable to access the website, have any recommendations and/or questions, feel free to email me:[caleb.langat@student.moringaschool.com](mailto:caleb.langat@student.moringaschool.com)
 ### License
